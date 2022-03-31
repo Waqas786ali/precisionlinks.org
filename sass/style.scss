@@ -1,0 +1,40 @@
+@import "./variable";
+@import "./mixan";
+@import "./base";
+@import "./btn";
+@import "./header";
+@import "./hambar";
+@import "./nav";
+@import "./about";
+@import "./feature";
+@import "./service";
+@import "./testimonial";
+@import "./contact";
+@import "./footer";
+
+.scroll {
+    position: fixed;
+    bottom: 70rem;
+    right: 4rem;
+    height: 4rem;
+    width: 4rem;
+    background-image: url("../img/scroll.svg");
+    background-repeat: no-repeat;
+    background-color: var(--gold);
+    background-size: contain;
+    background-position: center;
+    padding: 1rem;
+    border-radius: 50%;
+    z-index: 30;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .scroll.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 4rem;
+  }

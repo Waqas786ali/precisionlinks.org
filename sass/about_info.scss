@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    text-align: center;
+    background-color: wheat;
+    overflow-x: hidden;
+    font-family: "Playfair Display", serif;
+    // font-family: 'Playfair Display SC', serif;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    h1,
+    h2 {
+        font-family: "Poppins", sans-serif;
+    }
+    span {
+        color: orangered;
+    }
+    h2 { 
+        font-size: 5rem;
+        padding: 4rem 0;
+        @media (max-width: 900px) {
+            font-size: 3.7rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 3rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 2.7rem;
+        }
+    }
+    p {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        opacity: 0.9;
+        @media (max-width: 900px) {
+            font-size: 1.6rem;
+        }
+    }
+    h3 {
+        font-size: 3rem;
+        @media (max-width: 900px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+.about-more {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    padding: 3rem;
+    // text-align: left;
+    // @include flex-center-colom;
+    // left: -100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .back-arrow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 5rem;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        color: orangered;
+        
+        &:hover {
+            color: white;
+            background-color:orangered;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+        }
+    }
+    &-mission-box {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        background-color: rgba(255, 68, 0, 0.651);
+        color: white;
+        padding: 2rem;
+        border-radius: 20px;
+        @media (max-width: 800px) {
+            width: 100%;
+        }
+        @media (max-width: 500px) {
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+    h3 {
+        text-align: left;
+    }
+    p {
+        text-align: justify;
+    }
+    i {
+        text-align: left;
+        font-size: 4rem;
+        @media (max-width: 800px) {
+            font-size: 3rem;
+        }
+    }
+}

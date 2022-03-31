@@ -1,0 +1,31 @@
+.btn-boder,
+.btn-fill,
+.btn-boder-black {
+    padding: 1.5rem 3rem;
+    font-weight: bolder;
+    background-color: transparent;
+    border:2px solid var(--color-primary);
+    border-radius: 6px;
+    font-weight: bolder;
+    color:var(--color-primary);
+    letter-spacing: .1rem;
+    @media (max-width: 800px) {
+    padding: 1rem 1.5rem;
+      
+  }
+    &:hover{
+      @include overlay-hover;
+      cursor: pointer;
+      
+    }
+}
+.btn-fill{
+  color:var(--color-black);
+  background-color: var(--color-white);
+  
+}
+.btn-boder-black{
+  border:2px solid var(--gold);
+color: var(--gold);
+
+}

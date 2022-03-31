@@ -1,0 +1,140 @@
+@mixin bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flex-evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@mixin flex-center-colom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@mixin overlay-hover {
+    background-image: linear-gradient(104deg, transparent 0%, transparent 50%, var(--orange) 50%);
+    background-size: 220%;
+    transition: all .5s;
+    &:hover {
+        background-position: 100%;
+        color: var(--color-white);
+        transform: translateY(-.5rem);
+    }
+}
+
+@mixin h1 {
+    h1 {
+        font-size: calc(4.5rem + 2vw);
+            letter-spacing: 5px ;
+            font-weight: 700;
+            word-spacing: .2rem;
+            line-height: 1.2;
+        @media (max-width: 900px) {
+            font-size: 3.6rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 3.3rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 3rem;
+        }
+    }
+}
+@mixin h2 {
+    h2 {
+        font-size: 5rem;
+        padding: 4rem 0;
+        @media (max-width: 900px) {
+            font-size: 3.7rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 3rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 2.7rem;
+        }
+    }
+}
+@mixin span {
+    span {
+        color: var(--color-primary);
+    }
+}
+@mixin h3 {
+    h3 {
+        font-size: 3rem;
+        @media (max-width: 900px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 2rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 1.9rem;
+        }
+    }
+}
+@mixin h4 {
+    h4 {
+        font-size: 2.5rem;
+        @media (max-width: 900px) {
+            font-size: 2.2rem;
+        }
+        @media (max-width: 700px) {
+            font-size: 1.8rem;
+        }
+        @media (max-width: 500px) {
+            font-size: 1.6rem;
+        }
+    }
+}
+@mixin para {
+    p {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        opacity: 0.9;
+        @media (max-width: 900px) {
+            font-size: 1.6rem;
+        }
+    }
+}
+@mixin icon {
+    i {
+        font-size: 3rem;
+    }
+}
+
+
+
+
+@mixin media-desktop {
+    @media screen and (min-width: break-point(break-point-desktop)) {
+        @content;
+    }
+}
+
+@mixin media-tablet {
+    @media screen and (max-width: break-point(break-point-tablet)) {
+        @content;
+    }
+}
+
+@mixin media-medium {
+    @media screen and (max-width: break-point(break-point-medium)) {
+        @content;
+    }
+}
+@mixin media-small {
+    @media screen and (max-width: break-point(break-point-small)) {
+        @content;
+    }
+}
